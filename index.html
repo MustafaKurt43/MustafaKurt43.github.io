@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mustafa Kurt – Ofis & Tasarım Uzmanı</title>
+<style>
+/* ---------- KOYU KARBON PALET ---------- */
+:root{
+  --bg:#121212;
+  --surface:#1e1e1e;
+  --primary:#ff6b00;
+  --secondary:#ffab40;
+  --text:#eeeeee;
+  --muted:#9e9e9e;
+  --radius:12px;
+  --time:.6s;
+  --glow:0 0 8px var(--primary),0 0 16px var(--primary);
+}
+
+/* ---------- GENEL ---------- */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+body{background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{color:var(--primary);text-decoration:none}
+
+/* ---------- ANİMASYONLAR ---------- */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes glowPulse{
+  0%,100%{box-shadow:0 0 4px var(--primary)}
+  50%{box-shadow:var(--glow)}
+}
+@keyframes pop{
+  0%{transform:scale(1)}
+  50%{transform:scale(.95)}
+  100%{transform:scale(1)}
+}
+
+/* ---------- LAYOUT ---------- */
+.container{max-width:1000px;margin:auto;padding:2rem 1rem}
+header{text-align:center;margin-bottom:2rem;animation:fadeUp var(--time) ease}
+header img{width:140px;height:140px;border-radius:50%;object-fit:cover;border:4px solid var(--primary);transition:transform .3s}
+header img:hover{transform:scale(1.05) rotate(-3deg)}
+header h1{margin-top:.5rem;font-size:2.2rem}
+header p{font-size:1.1rem;color:var(--muted)}
+
+/* İletişim butonları */
+.contact{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;margin-top:1rem}
+.contact span{background:var(--surface);color:var(--secondary);padding:.4rem .8rem;border-radius:30px;font-size:.9rem;cursor:pointer;border:1px solid transparent;transition:all .3s}
+.contact span:hover{border-color:var(--primary);transform:translateY(-2px)}
+.contact span:active{animation:pop .2s ease}
+
+/* Bölüm başlıkları */
+h2{margin:2.5rem 0 .8rem;font-size:1.5rem;color:var(--primary);border-bottom:2px solid var(--primary);display:inline-block;animation:fadeUp var(--time) ease}
+
+/* Kartlar */
+.card{background:var(--surface);border-radius:var(--radius);padding:1.2rem 1.4rem;margin-bottom:1rem;box-shadow:0 4px 12px rgba(0,0,0,.35);transition:transform .3s,box-shadow .3s;animation:fadeUp var(--time) ease;animation-fill-mode:both}
+.card:nth-child(1){animation-delay:.1s}
+.card:nth-child(2){animation-delay:.2s}
+.card:nth-child(3){animation-delay:.3s}
+.card:nth-child(4){animation-delay:.4s}
+.card:hover{transform:translateY(-6px);box-shadow:var(--glow)}
+
+/* İçerik */
+.job-title{font-weight:600;color:var(--secondary)}
+.date{float:right;font-size:.8rem;color:var(--muted)}
+ul{list-style:none;padding-left:1rem}
+li{position:relative;padding-left:1rem;margin-bottom:.3rem}
+li::before{content:'▸';position:absolute;left:0;color:var(--primary)}
+
+/* Yetenek etiketleri */
+.skills{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem}
+.skills li{background:var(--primary);color:#fff;padding:.3rem .7rem;border-radius:20px;font-size:.8rem;animation:glowPulse 3s infinite ease-in-out}
+.skills li:nth-child(odd){animation-delay:.5s}
+
+/* İlgi alanları */
+.interest{display:flex;flex-wrap:wrap;gap:.6rem}
+.interest span{background:var(--surface);border:1px solid var(--primary);color:var(--secondary);padding:.4rem .8rem;border-radius:30px;font-size:.85rem;transition:all .3s}
+.interest span:hover{background:var(--primary);color:#fff}
+
+/* Footer */
+footer{text-align:center;margin-top:3rem;font-size:.75rem;color:var(--muted);animation:fadeUp 1s ease}
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- HEADER -->
+  <header>
+    <img src="https://media.licdn.com/dms/image/v2/D4D03AQEqBrpE62q7OA/profile-displayphoto-scale_400_400/B4DZoBTOM6IEAg-/0/1760958411400?e=1762387200&v=beta&t=YL5oz4Tjnfwqjj65hSnemLzwkSF_YMU8TGDChu8F6ys">
+    <h1>Mustafa Kurt</h1>
+    <p>Ofis Yönetimi & Ön Muhasebe | Grafik & Video Tasarım</p>
+    <div class="contact">
+      <span>📍 Bursa, TR</span>
+      <span>✉️ mustafakurt4362@hotmail.com</span>
+      <span>📱 0 531 450 36 09</span>
+      <span>🔗 <a href="https://linkedin.com/in/mustafa-kurt-418616213" target="_blank">LinkedIn</a></span>
+      <span>🌐 <a href="https://www.canva.com/design/DAGqvZLHafg/WoPoZo_7Yy9Mh4mEX-kJ4g/view?utm_content=DAGqvZLHafg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h637cc3c80a">Portföy</a></span>
+      <span>📜 <a href="https://typelish.com/mustafakurt">Yazılarım</a></span>
+    </div>
+  </header>
+
+  <!-- PROFİL -->
+  <section>
+    <h2>Profil</h2>
+    <div class="card">
+      <p>Ön muhasebe ve ofis yönetiminde 3+ yıl; resmî evrak, cari hesap, fatura ve raporlama konularında titiz çalışırım. Adobe Photoshop, Premiere Pro, Illustrator ile afiş, broşür, sosyal medya postu ve video içerikleri üretiyorum. 3. Ordu Komutanlığı’nda 9 ay kurumsal görsel iletişim sorumluluğu üstlendim. Hem idari hem yaratıcı süreçleri aynı anda yürütebilen, çözüm odaklı ve öğrenmeye açık bir profesyonelim.</p>
+    </div>
+  </section>
+
+  <!-- DENEYİM -->
+  <section>
+    <h2>İş Deneyimi</h2>
+
+    <div class="card">
+      <span class="date">05/2024 – 02/2025</span>
+      <div class="job-title">Basın & Halkla İlişkiler Şb. Müd. Vekili / Grafik&Video Tasarımcı – 3. Ordu Komutanlığı</div>
+      <ul>
+        <li>100+ resmî evrak takibi, dosyalama, dağıtım.</li>
+        <li>Kurumsal törenler için afiş, tablo, broşür, slayt tasarımı.</li>
+        <li>Kış Tatbikatı ve Tarihçe videolarının kurgu-montajı.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <span class="date">08/2024 – 10/2025</span>
+      <div class="job-title">Video Editor – TürkHaber TV</div>
+      <ul>
+        <li>Haber kurgu-montaj, renk düzeltme, ses miksajı, altyazı.</li>
+        <li>Kurumsal yayın standartlarına uygun hızlı içerik üretimi.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <span class="date">11/2022 – 11/2023</span>
+      <div class="job-title">Ön Muhasebe Elemanı – Daban Jeoloji Mühendisliği</div>
+      <ul>
+        <li>Devlet kurumlarıyla kuyu ruhsatı, noter işlemleri.</li>
+        <li>Mikro ile fatura, tahsilat, ödeme kayıtları; cari mutabakat.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <span class="date">04/2021 – Devam</span>
+      <div class="job-title">Content Creator – YouTube | Instagram | TikTok</div>
+      <ul>
+        <li>Video/görsel üretimi, kurgu, sosyal medya yönetimi, trend analizi.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- EĞİTİM -->
+  <section>
+    <h2>Eğitim & Sertifikalar</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Ön Lisans</strong> – Bilgisayar Programcılığı, Dumlupınar Üniv. (2019-2022, 3.17/4, Onur)</li>
+        <li><strong>Yapay Zeka Destekli Grafik Tasarım</strong> – TalkToWeb (2025)</li>
+        <li><strong>Microsoft Word & Excel</strong> – Sertifikalı</li>
+        <li><strong>Sosyal Medya Uzmanlığı</strong> – Sertifikalı</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- YETENEKLER -->
+  <section>
+    <h2>Yetenekler</h2>
+    <div class="card">
+      <h3 style="margin-bottom:.4rem;font-size:1rem">Ofis & Ön Muhasebe</h3>
+      <ul class="skills">
+        <li>MS Office</li><li>Fatura & Cari</li><li>Raporlama</li><li>Evrak Takibi</li><li>Zaman Yönetimi</li>
+      </ul>
+      <h3 style="margin:1rem 0 .4rem;font-size:1rem">Grafik & Video</h3>
+      <ul class="skills">
+        <li>Photoshop</li><li>Premiere</li><li>After Effects</li><li>Illustrator</li><li>InDesign</li><li>Storytelling</li><li>SEO & Trend</li>
+      </ul>
+      <h3 style="margin:1rem 0 .4rem;font-size:1rem">Dil</h3>
+      <ul class="skills">
+        <li>İngilizce – C1 (C2 interaction)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- İLGİ ALANLARI -->
+  <section>
+    <h2>İlgi Alanları</h2>
+    <div class="card interest">
+      <span>Film</span><span>Kitap</span><span>Fotoğraf</span><span>D&D</span><span>Müzik</span><span>Spor</span><span>Kahve</span><span>Teknoloji</span>
+    </div>
+  </section>
+
+  <footer>
+    Mustafa Kurt – Tüm hakları saklıdır © 2025
+  </footer>
+</div>
+</body>
+</html>
